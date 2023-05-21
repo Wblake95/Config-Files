@@ -1,0 +1,31 @@
+{
+	"layer": "top",
+	"modules-left": ["sway/workspaces", "sway/mode"],
+	"modules-center": ["sway/window"],
+	"modules-right": ["network", "pulseaudio", "battery", "clock"],
+	"sway/window": {
+		"max-length": 50
+	},
+	"network": {
+	    "format-wifi": "{essid} ({signalStrength}%)",
+	    "format-ethernet": "{ipaddr}/{cidr}",
+	    //"tooltip-format": "{ifname} via {gwaddr}",
+	    "format-linked": "{ifname} (No IP)",
+	    "format-disconnected": "Disconnected",
+	},
+	"pulseaudio": {
+		"format": "VOL:{volume}% {format_source}",
+		"format-muted": "{format_source}",
+		"format-source-muted": "MUTE"
+	},
+	"battery": {
+		"format": "BAT:{capacity}% {time}",
+		"states": {
+			"warning": 30,
+			"critical": 15
+		    },
+	},
+	"clock": {
+		"format": "{:%m/%d %H:%M}"
+	}
+}
