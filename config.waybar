@@ -1,3 +1,4 @@
+// this is how you comment
 {
 	"layer": "top",
 	"modules-left": ["sway/workspaces", "sway/mode"],
@@ -14,8 +15,7 @@
 	    "format-disconnected": "Disconnected",
 	},
 	"pulseaudio": {
-		"format": "VOL:{volume}% {format_source}",
-		"format-muted": "{format_source}",
+		"format": "VOL:{volume}%",
 		"format-source-muted": "MUTE"
 	},
 	"battery": {
