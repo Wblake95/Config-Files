@@ -6,6 +6,9 @@ set -e
 StorePath=~/Documents/.scripts/ConfigFiles
 
 # Home directory
+cd ~
+cp .bashrc $StorePath
+
 # ranger
 cd ~/.config/ranger
 cp rc.conf $StorePath
