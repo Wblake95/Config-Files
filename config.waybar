@@ -2,30 +2,48 @@
 {
 	"layer": "top",
 	"modules-left": ["sway/workspaces", "sway/mode"],
-	"modules-center": ["sway/window"],
-	"modules-right": ["network", "pulseaudio", "battery", "clock"],
+	// "modules-center": ["sway/window"],
+	// "modules-right": ["network", "pulseaudio", "battery", "clock"],
+	"modules-center": ["cpu","temperature", "battery"],
+	"modules-right": ["network", "pulseaudio", "clock"],
 	"sway/window": {
 		"max-length": 50
 	},
-	"network": {
-	    "format-wifi": "{essid} ({signalStrength}%)",
-	    "format-ethernet": "{ipaddr}/{cidr}",
-	    //"tooltip-format": "{ifname} via {gwaddr}",
-	    "format-linked": "{ifname} (No IP)",
-	    "format-disconnected": "Disconnected",
+	"cpu": {
+		"interval": 5,
+		"format": "CPU:{usage}% ({load})",
+		// "format": "CPU:{avg_frequency}",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		}
 	},
-	"pulseaudio": {
-		"format": "VOL:{volume}%",
-		"format-source-muted": "MUTE"
+	"temperature": {
+		"critical-threshold": 80,
+		"interval": 5,
+		"thermal-zone": 1,
+		"format": "CPU:{temperatureC}°C",
+		"tooltip": true
 	},
 	"battery": {
 		"format": "BAT:{capacity}% {time}",
 		"states": {
 			"warning": 30,
 			"critical": 15
-		    },
+		},
+	},
+	"network": {
+		"format-wifi": "{essid} ({signalStrength}%)",
+		"format-ethernet": "{ipaddr}/{cidr}",
+		//"tooltip-format": "{ifname} via {gwaddr}",
+		"format-linked": "{ifname} (No IP)",
+		"format-disconnected": "Disconnected",
+	},
+	"pulseaudio": {
+		"format": "VOL:{volume}%",
+		"format-source-muted": "MUTE"
 	},
 	"clock": {
-		"format": "{:%m/%d %H:%M}"
+		"format": "{:%H:%M   %m/%d}"
 	}
 }

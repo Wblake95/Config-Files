@@ -86,6 +86,8 @@ exec swayidle -w \
     # Start a terminal
     bindsym $mod+Return exec $term
 
+    bindsym Control+Alt+Shift+p exec 'shutdown now'
+
     # Kill focused window
     bindsym $mod+Shift+q kill
 
