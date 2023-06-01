@@ -17,3 +17,8 @@ cp config $StorePath/config.sway
 cd ~/.config/waybar
 cp config $StorePath/config.waybar
 cp style.css $StorePath/syle.css.waybar
+
+cd ~/Documents/.scripts/ConfigFiles/
+git add -A
+git commit
+git push
