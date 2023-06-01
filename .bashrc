@@ -31,13 +31,10 @@ set -o vi
 export EDITOR='vim'
 export VISUAL='vim'
 export TERM='alacritty'
+PATH=$PATH:'~/Documents/.scripts/ConfigFiles/'
 group='--group-directories-first'
 color='--color=auto'
 alias ls='ls -1 $color $group'
 alias la='ls -Alhog $color $group'
 alias ll='ls -lhog $color $group'
-
-
-
-
-
+alias diff='diff $color'
