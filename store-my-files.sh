@@ -18,6 +18,10 @@ cd ~/.config/waybar
 cp config $StorePath/config.waybar
 cp style.css $StorePath/syle.css.waybar
 
+# alacritty
+cd ~/.config/alacritty
+cp alacritty.yml $StorePath/
+
 cd ~/Documents/.scripts/ConfigFiles/
 git add -A
 git commit

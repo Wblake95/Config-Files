@@ -4,8 +4,8 @@
 	"modules-left": ["sway/workspaces", "sway/mode"],
 	// "modules-center": ["sway/window"],
 	// "modules-right": ["network", "pulseaudio", "battery", "clock"],
-	"modules-center": ["cpu","temperature", "battery"],
-	"modules-right": ["network", "pulseaudio", "clock"],
+	"modules-center": ["cpu", "temperature", "battery", "network", "pulseaudio"],
+	"modules-right": ["clock"],
 	"sway/window": {
 		"max-length": 50
 	},
