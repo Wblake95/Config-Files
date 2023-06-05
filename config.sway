@@ -3,6 +3,8 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
+# testing
+gaps inner 5
 
 ### Variables
 #
@@ -132,6 +134,8 @@ exec swayidle -w \
 #
 # Workspaces:
 #
+    # Title bars
+    default_border pixel 5
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
@@ -175,6 +179,7 @@ exec swayidle -w \
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
+    floating_modifier $mod normal
 
     # Swap focus between the tiling area and the floating area
     bindsym $mod+space focus mode_toggle
