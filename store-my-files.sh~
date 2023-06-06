@@ -8,7 +8,6 @@ StorePath=~/Documents/.scripts/ConfigFiles
 # Home directory
 cd ~
 cp .bashrc $StorePath
-cp .vimrc $StorePath
 
 # swaywm
 cd ~/.config/sway

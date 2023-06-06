@@ -27,7 +27,6 @@ fi
 unset rc
 
 # My additions
-# SYSCONFDIR='~/.config'
 set -o vi
 export EDITOR='vim'
 export VISUAL='vim'
