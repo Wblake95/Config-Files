@@ -53,3 +53,4 @@ endif
 
 " My additions
 imap ii <Esc>
+set relativenumber
