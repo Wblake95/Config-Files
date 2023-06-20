@@ -1,0 +1,4 @@
+#! /bin/env bash
+target="$HOME/Downloads/$(date +"%y%m%d_%T").png"
+grim $target
+grimshot save area $target

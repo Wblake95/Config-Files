@@ -29,6 +29,15 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
 # testing
 gaps inner 5
+bindsym Control+p exec ~/Documents/.scripts/ConfigFiles/gshot 
+input 'Logitech G305' {
+    # left_handed enabled
+    # tap enabled
+    natural_scroll disabled
+    # dwt enabled
+    accel_profile "flat" # disable mouse acceleration (enabled by default; to set it manually, use "adaptive" instead of "flat")
+    pointer_accel 0 # set mouse sensitivity (between -1 and 1)
+}
 
 ### Output configuration
 #
