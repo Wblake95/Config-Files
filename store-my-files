@@ -24,6 +24,8 @@ cd ~/.config/alacritty
 cp alacritty.yml $StorePath/
 
 cd ~/Documents/.scripts/ConfigFiles/
-git add -A
+# git add -A
+git status
+git add $1 $2 $3
 git commit
 git push
