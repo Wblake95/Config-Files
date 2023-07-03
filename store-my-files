@@ -23,7 +23,10 @@ cp style.css $StorePath/syle.css.waybar
 cd ~/.config/alacritty
 cp alacritty.yml $StorePath/
 
+if $1
+then
 cd ~/Documents/.scripts/ConfigFiles/
 git add $1 $2 $3 $4 $5
 git commit
 git push
+fi
