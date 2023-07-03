@@ -1,6 +1,6 @@
 #! /bin/env bash
 
-set -e
+set -ei
 
 # Variables
 StorePath=~/Documents/.scripts/ConfigFiles
