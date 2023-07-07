@@ -38,3 +38,6 @@ alias ls='ls -1 $color $group'
 alias la='ls -Alhog $color $group'
 alias ll='ls -lhog $color $group'
 alias diff='diff $color'
+
+alias configs='cd ~/Documents/.scripts/ConfigFiles'
+alias proj='cd ~/Documents/.scripts/python-fooling-around'
