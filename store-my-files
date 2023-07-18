@@ -7,26 +7,26 @@ storePath=~/Documents/.scripts/ConfigFiles
 
 # Home directory
 cd ~
-cp .bashrc $StorePath
-cp .vimrc $StorePath
+cp .bashrc $storePath
+cp .vimrc $storePath
 
 # swaywm
 cd ~/.config/sway
-cp config $StorePath/config.sway
+cp config $storePath/config.sway
 
 # waybar
 cd ~/.config/waybar
-cp config $StorePath/config.waybar
-cp style.css $StorePath/syle.css.waybar
+cp config $storePath/config.waybar
+cp style.css $storePath/syle.css.waybar
 
 # alacritty
 cd ~/.config/alacritty
-cp alacritty.yml $StorePath/
+cp alacritty.yml $storePath/
 
 #if $1
 #then
-cd ~/Documents/.scripts/ConfigFiles/
-git add $1 $2 $3 $4 $5
-git commit
-git push
+# cd ~/Documents/.scripts/ConfigFiles/
+# git add $1 $2 $3 $4 $5
+# git commit
+# git push
 #fi

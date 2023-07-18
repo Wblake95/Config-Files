@@ -52,14 +52,15 @@ input 'Logitech G305' {
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 set $laptop eDP-1
+set $monitor DP-1
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
-output eDP-1 {
+output $laptop {
 	mode 2256x1504@59.999Hz
 	scale 1
 	bg ~/Pictures/neytirix-yurtle-s-travelling-pot-shop.jpg fit
 }
-output DP-1 {
+output $monitor {
 	mode 2560x1440@59.951Hz
 	scale 1
 	bg ~/Pictures/neytirix-yurtle-s-travelling-pot-shop.jpg fit
