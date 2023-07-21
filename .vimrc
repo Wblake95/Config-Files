@@ -52,5 +52,11 @@ if has('syntax') && has('eval')
 endif
 
 " My additions
-imap ii <Esc>
+inoremap ii <Esc>
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {}<Esc>i
+inoremap " ""<Esc>i
 set relativenumber
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
