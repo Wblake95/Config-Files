@@ -3,7 +3,7 @@
 # set -e
 
 # Variables
-storePath=~/Documents/.scripts/ConfigFiles
+storePath=~/Documents/.scripts/configFiles
 
 # Home directory
 cd ~

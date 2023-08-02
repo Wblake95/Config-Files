@@ -14,8 +14,8 @@
 		"format": "CPU:{usage}% ({load})",
 		// "format": "CPU:{avg_frequency}",
 		"states": {
-			"warning": 70,
-			"critical": 90
+			"warning": 30,
+			"critical": 40
 		}
 	},
 	"temperature": {
