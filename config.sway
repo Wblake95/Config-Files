@@ -26,7 +26,7 @@ set $rofi_cmd rofi \
 # executables from PATH.
 # TODO: add window with the next release of rofi-wayland
 set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
-for_window [class="discord"] move scratchpad
+# for_window [class="discord"] move scratchpad
 
 # testing
 gaps inner 5
