@@ -101,7 +101,8 @@ exec swayidle -w \
     bindsym $mod+Return exec $term
 
     bindsym Control+Alt+Shift+p exec 'shutdown now'
-    bindsym Control+Alt+l exec swaylock
+    bindsym Control+Alt+l exec 'swaylock'
+    bindsym Shift+Control+Alt+l exec 'pkill sway'
 
     # Kill focused window
     bindsym $mod+Shift+q kill

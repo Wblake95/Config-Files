@@ -12,12 +12,12 @@
 
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
-if v:progname =~? "evim"
-  finish
-endif
+" if v:progname =~? "evim"
+"   finish
+" endif
 
 " Get the defaults that most users want.
-source $VIMRUNTIME/defaults.vim
+" source $VIMRUNTIME/defaults.vim
 
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
@@ -28,10 +28,10 @@ else
   endif
 endif
 
-if &t_Co > 2 || has("gui_running")
-  " Switch on highlighting the last used search pattern.
-  set hlsearch
-endif
+" if &t_Co > 2 || has("gui_running")
+"   " Switch on highlighting the last used search pattern.
+"   set hlsearch
+" endif
 
 " Put these in an autocmd group, so that we can delete them easily.
 augroup vimrcEx
@@ -57,6 +57,6 @@ inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap { {}<Esc>i
 inoremap " ""<Esc>i
-set relativenumber
+set relativenumber number
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete

@@ -8,7 +8,11 @@ storePath=~/Documents/.scripts/configFiles
 # Home directory
 cd ~
 cp .bashrc $storePath
-cp .vimrc $storePath
+# cp .vimrc $storePath
+
+# neovim testing config from neovim kickstart https://github.com/nvim-lua/kickstart.nvim
+cd ~/.config/nvim
+cp init.lua $storePath/nvimConfig 
 
 # swaywm
 cd ~/.config/sway
