@@ -31,7 +31,7 @@ set -o vi
 export EDITOR='nvim'
 export VISUAL='nvim'
 export TERM='alacritty'
-PATH=$PATH:'~/Documents/.scripts/configFiles/'
+PATH=$PATH:'~/Documents/.scripts/'
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:'/usr/lib64/libpython3.11.so.1.0'
 group='--group-directories-first'
 color='--color=auto'
