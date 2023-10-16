@@ -15,7 +15,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 # Recommends: foot
-set $term alacritty
+set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -31,6 +31,11 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 # testing
 gaps inner 5
 bindsym Control+p exec ~/Documents/.scripts/ConfigFiles/gshot 
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 input 'Logitech G305' {
     # left_handed enabled
     # tap enabled
@@ -55,15 +60,17 @@ set $laptop eDP-1
 set $monitor DP-1
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
+bindsym Alt+m output $laptop disable; output $monitor enable
+bindsym Alt+m+Shift output $laptop enable; output $monitor enable
 output $laptop {
 	mode 2256x1504@59.999Hz
 	scale 1
-	bg ~/Pictures/neytirix-yurtle-s-travelling-pot-shop.jpg fit
+	#bg ~/Pictures/neytirix-yurtle-s-travelling-pot-shop.jpg fit
 }
 output $monitor {
-	mode 2560x1440@59.951Hz
+	#mode 2560x1440@59.951Hz
 	scale 1
-	bg ~/Pictures/neytirix-yurtle-s-travelling-pot-shop.jpg fit
+	#bg ~/Pictures/neytirix-yurtle-s-travelling-pot-shop.jpg fit
 	adaptive_sync on
 }
 ### Idle configuration
@@ -237,6 +244,10 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+bar {
+	swaybar_command waybar
+}
+
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
 #  - /etc/sway/config.d
@@ -258,4 +269,4 @@ bindsym $mod+r mode "resize"
 # important to make the magic work. And if you want to learn the secret behind
 # the trick, it's all in the `wordexp(3)`.
 #
-include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
+#include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
